@@ -1,0 +1,1 @@
+build/doclava.pom --artifact=build/libs/doclava-*.jar --java-lib

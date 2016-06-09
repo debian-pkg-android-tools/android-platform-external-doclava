@@ -1,0 +1,38 @@
+Source: android-platform-external-doclava
+Section: java
+Priority: optional
+Maintainer: Android Tools Maintainer <android-tools-devel@lists.alioth.debian.org>
+Uploaders: Kai-Chung Yan <seamlikok@gmail.com>
+Build-Depends: debhelper (>= 9),
+               default-jdk (>= 2:1.7),
+               gradle-debian-helper,
+               libantlr3-runtime-java,
+               libguava-java,
+               libtagsoup-java,
+               maven-repo-helper
+Standards-Version: 3.9.8
+Homepage: https://android.googlesource.com/platform/external/doclava
+Vcs-Git: https://anonscm.debian.org/git/android-tools/android-platform-external-doclava.git
+Vcs-Browser: https://anonscm.debian.org/cgit/android-tools/android-platform-external-doclava.git
+
+Package: libdoclava-aosp-java
+Architecture: all
+Depends: libantlr3-runtime-java,
+         libguava-java,
+         libjsilver-aosp-java,
+         libtagsoup-java,
+         ${misc:Depends}
+Description: Custom Javadoc doclet by Google
+ Key differences between Doclava and the standard doclet include:
+   * Refreshed look and feel, including search capabilities
+   * Embeds versioning information in the documentation
+   * Uses a templating engine for user customizations
+   * Throw build errors for things that can easily be caught, like @param tags
+     that don't match the parameter names.
+   * Ability to include snippets of code from real source code
+   * Federate documentation between multiple sites
+   * Ability to embed javadocs in a larger web page.
+ .
+ This package is a fork of Doclava by The Android Open Source Project with
+ special features for generating the source files of the Android platform
+ framework API stubs "android.jar".
