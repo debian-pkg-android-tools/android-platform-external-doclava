@@ -8,6 +8,7 @@ Build-Depends: debhelper (>= 9),
                gradle-debian-helper,
                libantlr3-runtime-java,
                libguava-java,
+               libjsilver-aosp-java,
                libtagsoup-java,
                maven-repo-helper
 Standards-Version: 3.9.8
