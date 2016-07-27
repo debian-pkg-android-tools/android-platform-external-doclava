@@ -5,7 +5,7 @@ task generateClasspaths {
     doFirst {
         mkdir buildDir
         classpathsFile.createNewFile()
-        classpathsFile.write(configurations.runtime.join(':'))
+        classpathsFile.write(configurations.runtime.toSorted().join(':'))
     }
     clean.doLast { delete classpathsFile }
 }
