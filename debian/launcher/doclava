@@ -1,0 +1,5 @@
+#!/bin/sh
+
+classpaths=`cat /usr/share/doclava/classpaths`:/usr/share/java/doclava.jar
+
+exec java -cp "$classpaths" com.google.doclava.Doclava "$@"

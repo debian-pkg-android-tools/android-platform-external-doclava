@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Android Tools Maintainer <android-tools-devel@lists.alioth.debian.org>
 Uploaders: Kai-Chung Yan <seamlikok@gmail.com>
 Build-Depends: debhelper (>= 9),
-               default-jdk (>= 2:1.7),
+               default-jdk-headless | default-jdk (>= 2:1.7),
                gradle-debian-helper,
                libantlr3-runtime-java,
                libguava-java,
@@ -16,9 +16,10 @@ Homepage: https://android.googlesource.com/platform/external/doclava
 Vcs-Git: https://anonscm.debian.org/git/android-tools/android-platform-external-doclava.git
 Vcs-Browser: https://anonscm.debian.org/cgit/android-tools/android-platform-external-doclava.git
 
-Package: libdoclava-aosp-java
+Package: doclava-aosp
 Architecture: all
-Depends: libantlr3-runtime-java,
+Depends: default-jre-headless (>= 2:1.7) | java7-runtime-headless,
+         libantlr3-runtime-java,
          libguava-java,
          libjsilver-aosp-java,
          libtagsoup-java,
