@@ -11,15 +11,15 @@ Description: Prepare the build script
 +++ b/build.gradle
 @@ -1,6 +1,8 @@
  apply plugin: 'java'
-+apply plugin: 'maven'
  
 -import com.android.internal.BuildUtils
 +group = 'com.google.doclava'
 +version = "android-$androidVersion"
++archivesBaseName = 'doclava'
  
  sourceSets {
      main {
-@@ -13,40 +15,41 @@
+@@ -13,40 +15,13 @@
      }
  }
  
@@ -29,17 +29,14 @@ Description: Prepare the build script
 -    new ByteArrayOutputStream().withStream { os ->
 -        project.exec {
 -            executable "../../build/core/find-jdk-tools-jar.sh"
-+repositories {
-+    maven { url 'file:///usr/share/maven-repo' }
-+}
- 
+-
 -            standardOutput = os
 -        }
 -        return os.toString().trim()
 -    }
 +dependencies {
 +    compile 'com.google.guava:guava:debian'
-+    compile 'com.google.jsilver:jsilver:aosp'
++    compile 'com.google.jsilver:jsilver:debian'
 +    compile 'org.antlr:antlr-runtime:3.x'
 +    compile 'org.ccil.cowan.tagsoup:tagsoup:debian'
 +    compile files('/usr/lib/jvm/default-java/lib/tools.jar')
@@ -48,16 +45,8 @@ Description: Prepare the build script
 -if (project.hasProperty("usePrebuilts") && project.usePrebuilts == "true") {
 -    repositories {
 -        maven { url '../../prebuilts/tools/common/m2/repository' }
-+task poms {
-+    outputs.files "${buildDir}/*.pom"
-+    doFirst {
-+        mkdir "${buildDir}"
-+        pom {
-+            project { artifactId archivesBaseName }
-+        }.writeTo("${buildDir}/${project.name}.pom")
-     }
-+}
- 
+-    }
+-
 -    // TODO refactor to allow referencing the "gradle way"
 -    dependencies {
 -        compile files(findToolsJar())
@@ -75,20 +64,8 @@ Description: Prepare the build script
 -        compile project(path: ':antlr', configuration: 'antlrRuntime')
 -        compile project(':jsilver')
 -        compile project(':tagsoup')
-+task classpaths {
-+    def classpathsFile = file("${buildDir}/classpaths")
-+    outputs.files classpathsFile
-+    doFirst {
-+        mkdir "${buildDir}"
-+        classpathsFile.createNewFile()
-+        classpathsFile.write(configurations.compile.collect().join(':'))
-     }
- }
-+
-+clean.doLast {
-+    delete "${buildDir}/*.pom"
-+    delete "${buildDir}/classpaths"
-+}
-+
-+assemble.dependsOn ':poms', ':classpaths'
+-    }
+-}
++apply from: 'debian/generateClasspaths.gradle'
++apply from: 'debian/generatePom.gradle'
 \ No newline at end of file

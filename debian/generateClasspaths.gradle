@@ -1,0 +1,11 @@
+task generateClasspaths {
+    def classpathsFile = file("${buildDir}/classpaths")
+    outputs.files classpathsFile
+    assemble.dependsOn generateClasspaths
+    doFirst {
+        mkdir buildDir
+        classpathsFile.createNewFile()
+        classpathsFile.write(configurations.runtime.join(':'))
+    }
+    clean.doLast { delete classpathsFile }
+}
