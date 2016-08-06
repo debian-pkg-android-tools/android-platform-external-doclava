@@ -1,2 +1,2 @@
-build/classpaths        usr/share/doclava
+build/classpath         usr/share/doclava-aosp
 debian/launcher/doclava usr/bin

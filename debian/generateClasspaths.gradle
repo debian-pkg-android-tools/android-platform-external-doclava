@@ -1,5 +1,5 @@
 task generateClasspaths {
-    def classpathsFile = file("${buildDir}/classpaths")
+    def classpathsFile = file("${buildDir}/classpath")
     outputs.files classpathsFile
     assemble.dependsOn generateClasspaths
     doFirst {
