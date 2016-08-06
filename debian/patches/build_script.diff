@@ -9,17 +9,20 @@ Description: Prepare the build script
    * Generate classpaths
 --- a/build.gradle
 +++ b/build.gradle
-@@ -1,6 +1,8 @@
+@@ -1,6 +1,11 @@
  apply plugin: 'java'
  
 -import com.android.internal.BuildUtils
 +group = 'com.google.doclava'
 +version = "android-$androidVersion"
 +archivesBaseName = 'doclava'
++
++sourceCompatibility = 1.7
++targetCompatibility = 1.7
  
  sourceSets {
      main {
-@@ -13,40 +15,13 @@
+@@ -13,40 +18,13 @@
      }
  }
  
