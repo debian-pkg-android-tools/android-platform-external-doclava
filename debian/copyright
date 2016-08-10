@@ -12,8 +12,10 @@ Copyright: 2008, Tom Rodenberg <tarodenberg@gmail.com>
 License: GPL
 
 Files: res/assets/templates/assets/jquery-resizable.min.js
-Copyright: 2009 John Resig
-License: GPL and MIT
+Copyright: 2009, John Resig
+           2009, The Dojo Foundation
+           2009, the jQuery authors
+License: GPL, and MIT
 
 Files: debian/*
 Copyright: 2016, Kai-Chung Yan <seamlikok@gmail.com>
