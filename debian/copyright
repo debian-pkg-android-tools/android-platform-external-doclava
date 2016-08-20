@@ -9,13 +9,13 @@ License: Apache-2.0
 
 Files: res/assets/templates/assets/jquery-history.js
 Copyright: 2008, Tom Rodenberg <tarodenberg@gmail.com>
-License: GPL
+License: GPL-3+
 
 Files: res/assets/templates/assets/jquery-resizable.min.js
 Copyright: 2009, John Resig
            2009, The Dojo Foundation
            2009, the jQuery authors
-License: GPL, and MIT
+License: GPL-3+ and MIT
 
 Files: debian/*
 Copyright: 2016, Kai-Chung Yan <seamlikok@gmail.com>
@@ -34,7 +34,7 @@ License: Apache-2.0
  On Debian systems, the full text of the Apache License, Version 2.0
  can be found in the file `/usr/share/common-licenses/Apache-2.0'.
 
-License: GPL
+License: GPL-3+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
@@ -46,7 +46,7 @@ License: GPL
  GNU General Public License for more details.
  .
  On Debian systems, the full test of the GPL License can be found in the file
- "/usr/share/common-licenses/GPL".
+ "/usr/share/common-licenses/GPL-3".
 
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a copy of
