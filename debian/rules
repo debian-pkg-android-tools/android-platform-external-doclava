@@ -12,4 +12,4 @@ override_dh_auto_build:
 	dh_auto_build -- --project-prop androidVersion=$(ANDROID_VERSION) assemble
 
 get-orig-source:
-	wget --continue https://android.googlesource.com/platform/external/doclava/+archive/$(UPSTREAM_TAG).tar.gz
+	uscan --download-current-version --force-download --rename
