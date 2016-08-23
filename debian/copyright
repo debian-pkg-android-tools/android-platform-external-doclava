@@ -12,10 +12,15 @@ Copyright: 2008, Tom Rodenberg <tarodenberg@gmail.com>
 License: GPL-3+
 
 Files: res/assets/templates/assets/jquery-resizable.min.js
+       debian/missing-sources/res/assets/templates/assets/jquery-resizable.min.js
 Copyright: 2009, John Resig
            2009, The Dojo Foundation
            2009, the jQuery authors
 License: GPL-3+ and MIT
+
+Files: debian/missing-sources/res/assets/templates/assets/prettify.js
+Copyright: 2006, Google Inc.
+License: Apache-2.0
 
 Files: src/com/google/doclava/parser/Java.g
 Copyright: 2007-2008, Terence Parr

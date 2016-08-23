@@ -4,3 +4,14 @@ The source code has been excerpted form the git repository
 
 We excluded third-party codes using debian/copyright file. These codes
 won't go into the generated tarballs.
+
+The source for the files:
+ * res/assets/templates/assets/jquery-resizable.min.js
+ * res/assets/templates/assets/prettify.js
+has been put under debian/missing-sources
+
+jquery-resizable.min.js was obtained from
+ * http://code.jquery.com/jquery-1.3.2.js
+prettify.js was obtained from
+ * https://raw.githubusercontent.com/google/code-prettify/c67d80209c38e55431e6659ec51fc2d6a96ecf38/js-modules/prettify.js
+
