@@ -16,7 +16,7 @@ Copyright: 2008, Tom Rodenberg <tarodenberg@gmail.com>
 License: GPL-3+
 
 Files: res/assets/templates/assets/jquery-resizable.min.js
-       debian/missing-sources/res/assets/templates/assets/jquery-resizable.min.js
+       debian/missing-sources/res/assets/templates/assets/jquery-resizable.js
 Copyright: 2009, John Resig
            2009, The Dojo Foundation
            2009, the jQuery authors
