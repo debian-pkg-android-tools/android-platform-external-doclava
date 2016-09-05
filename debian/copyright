@@ -7,6 +7,10 @@ Copyright: 2016, The Android Open Source Project
            2010-2015, Google Inc.
 License: Apache-2.0
 
+Files: debian/*
+Copyright: 2016, Kai-Chung Yan <seamlikok@gmail.com>
+License: Apache-2.0
+
 Files: res/assets/templates/assets/jquery-history.js
 Copyright: 2008, Tom Rodenberg <tarodenberg@gmail.com>
 License: GPL-3+
@@ -25,10 +29,6 @@ License: Apache-2.0
 Files: src/com/google/doclava/parser/Java.g
 Copyright: 2007-2008, Terence Parr
 License: BSD-3-clause
-
-Files: debian/*
-Copyright: 2016, Kai-Chung Yan <seamlikok@gmail.com>
-License: Apache-2.0
 
 License: Apache-2.0
  Licensed under the Apache License, Version 2.0 (the "License");
